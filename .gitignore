@@ -4,3 +4,6 @@
 .*.swp
 /_obj/
 /bazel-*
+
+subprojects/argdata
+subprojects/cloudabi

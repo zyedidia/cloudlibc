@@ -1,0 +1,57 @@
+project('argdata', 'c')
+
+argdata_files = files(
+  'src/argdata_create_binary.c',
+  'src/argdata_create_fd.c',
+  'src/argdata_create_float.c',
+  'src/argdata_create_int_s.c',
+  'src/argdata_create_int_u.c',
+  'src/argdata_create_map.c',
+  'src/argdata_create_seq.c',
+  'src/argdata_create_str.c',
+  'src/argdata_create_str_c.c',
+  'src/argdata_create_timestamp.c',
+  'src/argdata_false.c',
+  'src/argdata_free.c',
+  'src/argdata_from_buffer.c',
+  'src/argdata_get_binary.c',
+  'src/argdata_get_bool.c',
+  'src/argdata_get_fd.c',
+  'src/argdata_get_float.c',
+  'src/argdata_get_int_s.c',
+  'src/argdata_get_int_u.c',
+  'src/argdata_get_str.c',
+  'src/argdata_get_str_c.c',
+  'src/argdata_get_timestamp.c',
+  'src/argdata_map_get.c',
+  'src/argdata_map_iterate.c',
+  'src/argdata_map_next.c',
+  'src/argdata_null.c',
+  'src/argdata_print_yaml.c',
+  'src/argdata_reader_create.c',
+  'src/argdata_reader_free.c',
+  'src/argdata_reader_get.c',
+  'src/argdata_reader_pull.c',
+  'src/argdata_reader_release_fd.c',
+  'src/argdata_seq_get.c',
+  'src/argdata_seq_iterate.c',
+  'src/argdata_seq_next.c',
+  'src/argdata_serialize.c',
+  'src/argdata_serialized_length.c',
+  'src/argdata_true.c',
+  'src/argdata_writer_create.c',
+  'src/argdata_writer_free.c',
+  'src/argdata_writer_push.c',
+  'src/argdata_writer_set.c',
+)
+
+libargdata = static_library(
+  'argdata',
+  argdata_files,
+  include_directories: include_directories('src'),
+)
+
+argdata_dep = declare_dependency(
+  link_with: libargdata,
+  include_directories: include_directories('src'),
+)

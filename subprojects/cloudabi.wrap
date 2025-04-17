@@ -1,0 +1,5 @@
+[wrap-git]
+url = https://github.com/NuxiNL/cloudabi
+patch_directory = cloudabi
+directory = cloudabi
+revision = master

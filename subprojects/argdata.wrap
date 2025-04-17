@@ -1,0 +1,5 @@
+[wrap-git]
+url = https://github.com/NuxiNL/argdata
+patch_directory = argdata
+directory = argdata
+revision = master
