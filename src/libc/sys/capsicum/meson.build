@@ -1,0 +1,18 @@
+srcs += files(
+  'CAP_ALL.c',
+  'cap_enter.c',
+  'cap_getmode.c',
+  'CAP_NONE.c',
+  'cap_rights_clear.c',
+  'cap_rights_contains.c',
+  'cap_rights_get.c',
+  'cap_rights_get_explicit.c',
+  'cap_rights_init.c',
+  'cap_rights_is_set.c',
+  'cap_rights_limit.c',
+  'cap_rights_limit_explicit.c',
+  'cap_rights_merge.c',
+  'cap_rights_remove.c',
+  'cap_rights_set.c',
+  'cap_sandboxed.c',
+)
